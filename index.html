@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compliance FAQ — Better Homes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --slate:   #1f343f;
+      --sand:    #d9b9a0;
+      --mist:    #ede8e4;
+      --pink:    #ff787a;
+      --denim:   #2c537a;
+      --powder:  #7ba0b2;
+      --bg:      #ede8e4;
+      --surface: #f5f1ec;
+      --white:   #ffffff;
+      --border:  #ddd5cb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--bg);
+      color: var(--slate);
+      min-height: 100vh;
+    }
+
+    
+
+    /* ─── Header ─── */
+    header {
+      background: var(--slate);
+      padding: 0 2.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-img {
+      height: 22px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .header-right {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--powder);
+      letter-spacing: 0.06em;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      background: var(--slate);
+      position: relative;
+      overflow: hidden;
+      padding: 3.5rem 2.5rem 0;
+    }
+
+    .hero::after {
+      content: '';
+      display: block;
+      height: 52px;
+      background: var(--bg);
+      border-radius: 28px 28px 0 0;
+      margin-top: 2.5rem;
+    }
+
+    .hero-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '◆';
+      font-size: 6px;
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.01em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--sand);
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      color: var(--powder);
+      font-size: 0.9rem;
+      font-weight: 300;
+      max-width: 500px;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── Search ─── */
+    .search-wrap {
+      position: relative;
+      max-width: 540px;
+    }
+
+    #search {
+      width: 100%;
+      padding: 13px 16px 13px 44px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px;
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    #search::placeholder { color: rgba(122,160,178,0.7); }
+    #search:focus {
+      border-color: var(--sand);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--powder);
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    /* ─── Main ─── */
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 2.5rem 5rem;
+    }
+
+    /* ─── Alert Banner ─── */
+    .alert-banner {
+      background: var(--slate);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .alert-diamond {
+      width: 36px; height: 36px;
+      background: var(--pink);
+      transform: rotate(45deg);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .alert-diamond span {
+      transform: rotate(-45deg);
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .alert-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.01em;
+    }
+
+    .alert-content p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--powder);
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+    }
+
+    .alert-content p strong { color: var(--sand); font-weight: 500; }
+
+    /* ─── Filter row ─── */
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      align-items: center;
+      padding-top: 0.25rem;
+    }
+
+    .filter-label {
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--powder);
+      margin-right: 6px;
+    }
+
+    .cat-btn {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 6px 16px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: #7a8a94;
+      cursor: pointer;
+      transition: all 0.18s;
+      white-space: nowrap;
+    }
+
+    .cat-btn:hover {
+      border-color: var(--denim);
+      color: var(--denim);
+    }
+
+    .cat-btn.active {
+      background: var(--slate);
+      border-color: var(--slate);
+      color: var(--white);
+    }
+
+    /* ─── Stats ─── */
+    .stats-bar {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.78rem;
+      color: #7a8a94;
+      padding: 11px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      align-items: center;
+    }
+
+    .stats-bar b { color: var(--slate); font-weight: 600; }
+    .stats-divider { width: 1px; height: 14px; background: var(--border); }
+
+    /* ─── Module Section ─── */
+    .module-section { margin-bottom: 2.25rem; }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .module-diamond {
+      width: 26px; height: 26px;
+      background: var(--slate);
+      transform: rotate(45deg);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .module-diamond span {
+      transform: rotate(-45deg);
+      color: var(--sand);
+      font-size: 0.6rem;
+      font-weight: 700;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0;
+    }
+
+    .module-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--slate);
+      letter-spacing: 0.01em;
+    }
+
+    .module-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ─── FAQ Item ─── */
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 6px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .faq-item:hover { border-color: #c8bfb4; }
+
+    .faq-item.open {
+      border-color: var(--slate);
+      box-shadow: 0 2px 12px rgba(31,52,63,0.08);
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      color: var(--slate);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.55;
+      letter-spacing: 0.01em;
+    }
+
+    .faq-q:hover { background: rgba(31,52,63,0.02); }
+
+    .q-label {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: var(--slate);
+      background: var(--sand);
+      border-radius: 3px;
+      padding: 3px 8px;
+      white-space: nowrap;
+      margin-top: 1px;
+      flex-shrink: 0;
+      letter-spacing: 0.06em;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .q-text { flex: 1; }
+
+    .chevron {
+      flex-shrink: 0;
+      color: var(--powder);
+      transition: transform 0.3s, color 0.2s;
+      margin-top: 3px;
+    }
+
+    .faq-item.open .chevron {
+      transform: rotate(180deg);
+      color: var(--slate);
+    }
+
+    /* ─── Answer ─── */
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-a-inner {
+      padding: 2px 18px 18px 46px;
+      color: #5a6e78;
+      font-size: 0.855rem;
+      line-height: 1.85;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-a-inner ul {
+      margin: 8px 0 8px 2px;
+      padding-left: 1.2rem;
+    }
+
+    .faq-a-inner li { margin-bottom: 5px; }
+
+    .faq-a-inner strong {
+      color: var(--slate);
+      font-weight: 600;
+    }
+
+    .faq-a-inner p { margin-bottom: 6px; }
+
+    .faq-a-inner .callout {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: rgba(31,52,63,0.06);
+      border-left: 3px solid var(--slate);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.8rem;
+      color: var(--slate);
+    }
+
+    /* ─── Empty ─── */
+    .empty {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #7a8a94;
+    }
+
+    .empty-icon { font-size: 2rem; margin-bottom: 0.75rem; opacity: 0.5; }
+
+    /* ─── Highlight ─── */
+    mark {
+      background: rgba(217,185,160,0.4);
+      color: var(--slate);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--slate);
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--powder);
+      letter-spacing: 0.04em;
+    }
+
+    footer strong { color: var(--sand); }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 640px) {
+      header { padding: 0 1.25rem; }
+      .hero { padding: 2.5rem 1.25rem 0; }
+      main { padding: 0 1.25rem 4rem; }
+      .faq-a-inner { padding-left: 18px; }
+      .alert-banner { flex-direction: column; gap: 0.75rem; }
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="logo.png" class="logo-img" alt="betterhomes" />
+      <span style="color:rgba(122,160,178,0.5);font-size:0.75rem;font-weight:300;letter-spacing:0.08em;">| Compliance</span>
+    </div>
+    <div class="header-right" id="versionBadge">Loading…</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Internal Reference</div>
+    <h1>KYC & Compliance<br><em>Quick Answers</em></h1>
+    <p class="hero-sub">Answers to common compliance queries, maintained by the compliance team. Updates automatically — the link never changes.</p>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search" placeholder="Search by keyword, topic or scenario…" autocomplete="off" />
+    </div>
+  </div>
+</section>
+
+<main>
+  <div style="height:1.75rem"></div>
+
+  <div class="alert-banner">
+    <div class="alert-diamond"><span>⚠</span></div>
+    <div class="alert-content">
+      <h3>Escalate to Compliance Team Only</h3>
+      <p>These cases must <strong>never</strong> be handled independently:<br>
+      <strong>Exceptional / non-standard cases &nbsp;·&nbsp; PEPs &nbsp;·&nbsp; Sanctions matches &nbsp;·&nbsp; Adverse media findings &nbsp;·&nbsp; High-risk jurisdictions (Myanmar, Iran, North Korea, etc.)</strong></p>
+    </div>
+  </div>
+
+  <div class="filter-row" id="filterRow">
+    <span class="filter-label">Filter by</span>
+  </div>
+
+  <div class="stats-bar" id="statsBar">
+    <span>Loading…</span>
+  </div>
+
+  <div id="faqContainer">
+    <div style="text-align:center;padding:3rem;color:#7a8a94;font-weight:300;">
+      <div style="font-size:1.5rem;margin-bottom:0.75rem;opacity:0.4">◆</div>
+      Loading questions…
+    </div>
+  </div>
+</main>
+
+<footer>
+  For complex or non-standard cases, contact the <strong>Compliance Team</strong> directly before proceeding.
+  &nbsp;·&nbsp; This page updates automatically when edited.
+</footer>
+
+<script>
+  let allData = null;
+  let activeCategory = 'All';
+  let searchQuery = '';
+
+  async function loadFAQ() {
+    try {
+      const res = await fetch('faqs.json?t=' + Date.now());
+      allData = await res.json();
+      render();
+    } catch (e) {
+      document.getElementById('faqContainer').innerHTML =
+        '<div class="empty"><div class="empty-icon">◆</div><p>Could not load FAQ data. Please try refreshing.</p></div>';
+    }
+  }
+
+  function render() {
+    if (!allData) return;
+
+    document.getElementById('versionBadge').textContent =
+      'Updated: ' + (allData.lastUpdated || '—') + '  ·  v' + (allData.version || '1.0');
+
+    const cats = ['All', ...new Set(allData.faqs.flatMap(f => f.categories || []))];
+    const filterRow = document.getElementById('filterRow');
+    filterRow.innerHTML = '<span class="filter-label">Filter by</span>' +
+      cats.map(c =>
+        `<button class="cat-btn ${c === activeCategory ? 'active' : ''}" onclick="setCategory('${c}')">${c}</button>`
+      ).join('');
+
+    let items = allData.faqs;
+    if (activeCategory !== 'All') items = items.filter(f => (f.categories || []).includes(activeCategory));
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      items = items.filter(f => f.question.toLowerCase().includes(q) || f.answer.toLowerCase().includes(q));
+    }
+
+    document.getElementById('statsBar').innerHTML =
+      `<span><b>${items.length}</b> question${items.length !== 1 ? 's' : ''} shown</span>
+       <div class="stats-divider"></div>
+       <span><b>${allData.faqs.length}</b> total</span>
+       <div class="stats-divider"></div>
+       <span>Last updated: <b>${allData.lastUpdated || '—'}</b></span>`;
+
+    const container = document.getElementById('faqContainer');
+
+    if (items.length === 0) {
+      container.innerHTML = '<div class="empty"><div class="empty-icon">◆</div><p>No questions match your search.</p></div>';
+      return;
+    }
+
+    if (!searchQuery && activeCategory === 'All') {
+      const grouped = {};
+      items.forEach(f => {
+        const cat = (f.categories && f.categories[0]) || 'General';
+        if (!grouped[cat]) grouped[cat] = [];
+        grouped[cat].push(f);
+      });
+      let n = 1;
+      container.innerHTML = Object.entries(grouped).map(([cat, faqs]) => {
+        const num = n++;
+        return `<div class="module-section">
+          <div class="module-header">
+            <div class="module-diamond"><span>${num}</span></div>
+            <div class="module-title">${cat}</div>
+            <div class="module-line"></div>
+          </div>
+          ${faqs.map((f, i) => renderItem(f, i + 1)).join('')}
+        </div>`;
+      }).join('');
+    } else {
+      container.innerHTML = items.map((f, i) => renderItem(f, i + 1)).join('');
+    }
+  }
+
+  function hl(txt) {
+    if (!searchQuery) return txt;
+    const re = new RegExp(`(${searchQuery.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
+    return txt.replace(re, '<mark>$1</mark>');
+  }
+
+  function formatAnswer(text) {
+    const lines = text.split('\n');
+    let html = '';
+    let inList = false;
+    lines.forEach(line => {
+      line = line.trim();
+      if (!line) return;
+      line = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      if (line.startsWith('- ') || line.startsWith('• ')) {
+        if (!inList) { html += '<ul>'; inList = true; }
+        html += `<li>${line.replace(/^[-•] /, '')}</li>`;
+      } else {
+        if (inList) { html += '</ul>'; inList = false; }
+        if (line.toUpperCase() === line && line.length > 10 && !line.includes('.')) {
+          html += `<div class="callout"><strong>◆ ${line}</strong></div>`;
+        } else {
+          html += `<p>${line}</p>`;
+        }
+      }
+    });
+    if (inList) html += '</ul>';
+    return html;
+  }
+
+  function renderItem(f, idx) {
+    const answerHtml = formatAnswer(f.answer);
+    return `
+      <div class="faq-item" id="item-${f.id}">
+        <button class="faq-q" onclick="toggle('${f.id}')">
+          <span class="q-label">Q${String(idx).padStart(2,'0')}</span>
+          <span class="q-text">${hl(f.question)}</span>
+          <span class="chevron">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M2 4L6.5 9L11 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-a" id="ans-${f.id}">
+          <div class="faq-a-inner">${answerHtml}</div>
+        </div>
+      </div>`;
+  }
+
+  function toggle(id) {
+    const item = document.getElementById('item-' + id);
+    const ans  = document.getElementById('ans-' + id);
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-a').style.maxHeight = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  }
+
+  function setCategory(cat) {
+    activeCategory = cat;
+    render();
+  }
+
+  document.getElementById('search').addEventListener('input', e => {
+    searchQuery = e.target.value.trim();
+    render();
+  });
+
+  loadFAQ();
+</script>
+</body>
+</html>

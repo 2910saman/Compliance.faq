@@ -1,0 +1,183 @@
+{
+  "lastUpdated": "May 2026",
+  "version": "1.0",
+  "faqs": [
+
+    {
+      "id": "101",
+      "question": "What fields are mandatory in the KYC form?",
+      "answer": "ALL FIELDS must be filled out completely, with particular attention to:\n- Employment / Business information\n- Financial Information",
+      "categories": ["KYC Queries"],
+      "tags": ["KYC", "mandatory fields", "form"]
+    },
+
+    {
+      "id": "102",
+      "question": "What are the basic documents required for KYC?",
+      "answer": "The following documents are required:\n- Completed KYC Form\n- Valid Passport\n- Valid Emirates ID (for UAE residents)\n- Proof of Address (recent utility bill, tax bill, tenancy contract, or title deed)",
+      "categories": ["KYC Queries"],
+      "tags": ["KYC", "documents", "Emirates ID", "passport"]
+    },
+
+    {
+      "id": "103",
+      "question": "What is the maximum cash payment allowed?",
+      "answer": "Cash payments are permitted up to **AED 55,000 per client per calendar year (cumulative across all transactions).**\n\nAny cash transaction (single or cumulative) approaching or exceeding this threshold triggers:\n- Mandatory **Cash Declaration Form**\n- Verified **Source of Funds (SoF)**\n- Immediate escalation to Compliance **prior to acceptance**",
+      "categories": ["KYC Queries"],
+      "tags": ["cash", "AED 55000", "source of funds", "cash declaration"]
+    },
+
+    {
+      "id": "104",
+      "question": "What if the client selects \"Retiree\" as their employment status?",
+      "answer": "Request details of their **previous employment/business activity** (mandatory).\n\nObtain and verify **Source of Funds**, including:\n- Pension statements\n- Investment income\n- Savings accumulation evidence",
+      "categories": ["KYC Queries"],
+      "tags": ["retiree", "source of funds", "employment"]
+    },
+
+    {
+      "id": "105",
+      "question": "What if the client selects \"Student\" as their employment status?",
+      "answer": "**If the student is purchasing a property:**\n- Identify the primary source of funds (usually guardian)\n- Obtain guardian's: KYC, Passport, Emirates ID (for UAE residents), Proof of Address\n\n**If the transaction involves a minor (property resale):**\n- Transactions involving minors are subject to UAE legal restrictions\n- Court approval is required prior to proceeding with the sale\n- Verify the legal guardian's authority\n- Full KYC of the guardian and all relevant documents\n- No transaction involving a minor's property may proceed without valid court authorization",
+      "categories": ["KYC Queries"],
+      "tags": ["student", "minor", "guardian", "court approval"]
+    },
+
+    {
+      "id": "106",
+      "question": "What if the client is \"Self-Employed\"?",
+      "answer": "- Specify clear nature of business — vague terms like \"General Trading\" are not acceptable\n- Request Trade License",
+      "categories": ["KYC Queries"],
+      "tags": ["self-employed", "trade license", "business"]
+    },
+
+    {
+      "id": "107",
+      "question": "What if \"Inheritance\" is mentioned as the source of funds?",
+      "answer": "- Clarify source (maternal/paternal)\n- Obtain documented **inheritance evidence** (probate, will, court order, or equivalent)\n- Establish clear **origin of wealth of the deceased**",
+      "categories": ["KYC Queries"],
+      "tags": ["inheritance", "source of funds", "source of wealth"]
+    },
+
+    {
+      "id": "108",
+      "question": "What if employment is listed as \"Housewife\", \"Spouse\", or \"Family Member\"?",
+      "answer": "**Housewife / Spouse:**\n- Obtain husband's: KYC, Passport, Emirates ID (for UAE residents)\n\n**Family Member:**\n- Clarify relationship\n- Obtain their KYC, Passport, Emirates ID (for UAE residents)",
+      "categories": ["KYC Queries"],
+      "tags": ["housewife", "spouse", "family member", "KYC"]
+    },
+
+    {
+      "id": "109",
+      "question": "What if there are joint buyers?",
+      "answer": "**Husband & Wife:**\n- Clearly stated in KYC or confirmed via email\n\n**Others (friends / family / business partners):**\n- Signed written confirmation outlining:\n- Payment structure\n- Ownership percentages",
+      "categories": ["KYC Queries"],
+      "tags": ["joint buyers", "ownership", "payment structure"]
+    },
+
+    {
+      "id": "201",
+      "question": "What if a third-party payment is involved?",
+      "answer": "Third-party payments are **not permitted unless fully justified and documented.**\n\n**For Individuals:**\n- Third-Party Due Diligence Form\n- Passport\n- Emirates ID (for UAE residents)\n\n**For Companies:**\n- Third-Party Due Diligence Form\n- Trade License\n- Passports & Emirates IDs (for UAE residents) of all owners",
+      "categories": ["Red Flag Queries"],
+      "tags": ["third party", "due diligence", "payment"]
+    },
+
+    {
+      "id": "202",
+      "question": "What if a manager's cheque is used for agency fees?",
+      "answer": "The following is mandatory:\n- Bank-issued proof (receipt / counterfoil showing account details)\n\nIf a third party is identified:\n- Collect Source of Funds (SoF) / Source of Wealth (SoW)\n- Third-Party Due Diligence Form\n- Passport\n- Emirates ID (for UAE residents)",
+      "categories": ["Red Flag Queries"],
+      "tags": ["manager's cheque", "agency fees", "third party", "source of funds"]
+    },
+
+    {
+      "id": "203",
+      "question": "When is Enhanced Due Diligence (EDD) triggered?",
+      "answer": "EDD is mandatory under the following conditions:\n- Customer is a **PEP (or related / close associate)**\n- Customer / UBO linked to a **high-risk or sanctioned jurisdiction**\n- **Source of Funds / Wealth cannot be clearly verified**\n- Use of **complex or opaque ownership structures**\n- **Unusual transaction patterns** inconsistent with profile\n- **Adverse media** identified\n\n**EDD Requirements:**\n- Verified **Source of Wealth (SoW)** (independent documentation)\n- Senior Management / MLRO approval **before onboarding or transaction**\n- Enhanced monitoring flag applied in system",
+      "categories": ["Red Flag Queries"],
+      "tags": ["EDD", "enhanced due diligence", "PEP", "high risk", "MLRO"]
+    },
+
+    {
+      "id": "301",
+      "question": "What if the client is a Company?",
+      "answer": "Required documents:\n- Trade License & MOA / AOA\n- Passport & Emirates ID for Signatory, Shareholders, Managers, and Secretary\n- UAE Residency Visas (if applicable)\n- Proof of Company Address (Utility Bill / Tenancy Contract)\n- Certificate of Incumbency / UBO Declaration\n- Board Resolution or POA for Signatory\n- Legal English translation for foreign documents\n\nIdentify and verify **Ultimate Beneficial Owners (UBOs)**:\n- **Threshold: 25% ownership or control** (or as per company policy)\n- Full KYC for all UBOs, directors, and authorized signatories\n- If ownership structure is unclear or layered: **EDD required**\n- No onboarding permitted until **full ownership transparency is achieved**",
+      "categories": ["Entity & Structure Queries"],
+      "tags": ["company", "UBO", "EDD", "trade license", "MOA"]
+    },
+
+    {
+      "id": "302",
+      "question": "What if the client is a Trust or Foundation?",
+      "answer": "Required documents:\n- Trust Deed or Foundation Charter\n- Identification of the Settlor, Trustees, and Beneficiaries\n- Verification of the **Source of Wealth of the Settlor**",
+      "categories": ["Entity & Structure Queries"],
+      "tags": ["trust", "foundation", "settlor", "source of wealth"]
+    },
+
+    {
+      "id": "303",
+      "question": "What if a Power of Attorney (POA) is used?",
+      "answer": "The POA must be:\n- Notarized and **legally attested** (home country + UAE if applicable)\n- KYC and ID for the **Attorney** (the person acting)\n- KYC and ID for the **Principal** (the owner)\n\nMandatory:\n- Verification of **reason for POA usage**",
+      "categories": ["Entity & Structure Queries"],
+      "tags": ["POA", "power of attorney", "notarized", "KYC"]
+    },
+
+    {
+      "id": "401",
+      "question": "What if the Proof of Address is not in the client's name?",
+      "answer": "- **Living with a spouse:** Marriage Certificate + Spouse's ID + Proof of Address\n- **Living with parents:** Parent's ID + Proof of Address\n- **Company-provided accommodation:** Letter from Employer (on letterhead) confirming residency",
+      "categories": ["Common Discrepancies"],
+      "tags": ["proof of address", "spouse", "employer letter"]
+    },
+
+    {
+      "id": "402",
+      "question": "What if the ID is in a non-Latin script (e.g. Arabic, Cyrillic, Chinese)?",
+      "answer": "- Provide the original document\n- Provide a **Certified Legal Translation** into English or Arabic",
+      "categories": ["Common Discrepancies"],
+      "tags": ["ID", "translation", "non-Latin", "Arabic"]
+    },
+
+    {
+      "id": "403",
+      "question": "What if the client has dual nationality?",
+      "answer": "- Collect IDs for **both** nationalities\n- If one nationality is a **high-risk country**, the entire file is treated as **High-Risk**",
+      "categories": ["Common Discrepancies"],
+      "tags": ["dual nationality", "high risk", "passport"]
+    },
+
+    {
+      "id": "404",
+      "question": "What if the customer's ID has expired?",
+      "answer": "- **Do not proceed** with any onboarding or transactions\n- Request a valid, unexpired ID from the customer immediately",
+      "categories": ["Common Discrepancies"],
+      "tags": ["expired ID", "onboarding", "Emirates ID"]
+    },
+
+    {
+      "id": "501",
+      "question": "What if the funds are coming from a joint account?",
+      "answer": "- Confirm the relationship between account holders\n- Obtain KYC for the second account holder if they are **not a party to the contract**",
+      "categories": ["Transaction Red Flags"],
+      "tags": ["joint account", "KYC", "source of funds"]
+    },
+
+    {
+      "id": "502",
+      "question": "What if the client requests a refund to a different bank account?",
+      "answer": "STRICTLY PROHIBITED\n\nRefunds must only be sent to the **original source of funds** (the same account that paid).\n\nEscalation to **Compliance & Accounts** is mandatory for any \"change of bank\" refund request — no exceptions.",
+      "categories": ["Transaction Red Flags"],
+      "tags": ["refund", "change of bank", "compliance escalation"]
+    },
+
+    {
+      "id": "503",
+      "question": "What if the client is a PEP (Politically Exposed Person)?",
+      "answer": "Mandatory EDD applies **regardless of transaction size.**\n\nMust establish:\n- **Source of Wealth** (not just Source of Funds)\n\nApproval required from:\n- **Senior Management + MLRO** — mandatory before proceeding\n\nApply **continuous enhanced monitoring** throughout the relationship.",
+      "categories": ["Transaction Red Flags"],
+      "tags": ["PEP", "EDD", "MLRO", "source of wealth", "senior management"]
+    }
+
+  ]
+}
